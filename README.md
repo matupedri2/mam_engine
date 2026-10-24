@@ -6,6 +6,7 @@ Designed and implemented the engine’s full audio system on top of OpenAL. Buil
 
 Terrain System
 Built the engine’s procedural terrain pipeline end to end. The heightmap is generated with fractal Perlin noise (configurable frequency, octaves, persistence, redistribution) or loaded from an external image. The terrain is divided into a configurable chunk grid (up to 16×16 chunks of 1 km²) with per-chunk mesh subdivision. Surface appearance uses splat mapping — three textures (grass, ground, snow) blended by height plus a detail overlay. Vegetation is generated procedurally: an L-System constructs tree geometry from rewrite rules, and up to 5 000 instances are scattered across the terrain via GPU instancing within configurable height bands. Added a runtime sculpting tool with Raise, Lower, and Smooth brush modes controllable through ImGui, and a world-generation panel that regenerates terrain and vegetation in-place without restarting the application.
+
 #Technologies
 C++
 OpenGL
